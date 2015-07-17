@@ -194,15 +194,15 @@
 - (void)setBorderWidth:(CGFloat)borderWidth
 {
     _borderWidth = borderWidth;
-    if (_hasBorderFill) {
-        _highlightedColor = _borderColor;
-    }
     [self updateButtonUserInterface];
 }
 
 - (void)setBorderColor:(UIColor *)borderColor
 {
     _borderColor = borderColor;
+    if (_hasBorderFill) {
+        _highlightedColor = _borderColor;
+    }
     [self updateButtonUserInterface];
 }
 
